@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Sales and Inventory</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Welcome Popup -->
+  <div id="welcome-popup">
+    <h1>Welcome to Our Car Sales & Inventory Store</h1>
+  </div>
+
+  <!-- Home Page -->
+  <div id="home-page" style="display:none;">
+    <header>
+      <h1>Car Sales and Inventory</h1>
+    </header>
+
+    <section id="inventory-section">
+      <h2>Car Models Available</h2>
+      <div id="inventory-list">
+        <!-- JavaScript will dynamically populate car models here -->
+      </div>
+    </section>
+
+    <section id="sales-section">
+      <h2>Car Sales History</h2>
+      <table id="sales-table">
+        <thead>
+          <tr>
+            <th>Car Model</th>
+            <th>Year</th>
+            <th>Sold Units</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- JavaScript will dynamically populate sales data here -->
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
