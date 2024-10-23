@@ -1,84 +1,111 @@
 /* styles.css */
 
-/* General Styles */
+/* Basic Styling */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
   color: #333;
+  margin-bottom: 10px;
 }
 
 /* Welcome Popup */
 #welcome-popup {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100vh;
   background-color: #333;
-  color: #fff;
-  font-size: 2rem;
-  position: absolute;
-  width: 100%;
-  z-index: 1000;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+#welcome-popup h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+#welcome-popup p {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
 }
 
 #home-page {
-  padding: 20px;
+  display: none;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
-/* Header */
-header {
-  text-align: center;
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 0;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-/* Inventory Section */
-#inventory-section {
-  margin: 20px 0;
-}
-
-#inventory-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+#inventory-list, #suggested-cars-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
 }
 
 .car-item {
-  border: 1px solid #ccc;
-  padding: 15px;
-  width: 200px;
-  background-color: #fff;
-}
-
-.car-item h3 {
-  margin: 0 0 10px 0;
-}
-
-.car-item p {
-  margin: 5px 0;
-}
-
-/* Sales Section */
-#sales-section {
-  margin-top: 40px;
-}
-
-#sales-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
-
-#sales-table th, #sales-table td {
+  background-color: white;
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: 10px;
   text-align: center;
 }
 
-#sales-table th {
+input[type="text"], input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px;
   background-color: #4CAF50;
   color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Sales Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
 }
